@@ -8,6 +8,7 @@
 import XCTest
 @testable import FoodItemsApi
 
+@MainActor
 final class RemoteFoodItemsApiTests: XCTestCase {
     
     func testSUT_LoaderisNotNil() {
@@ -15,13 +16,30 @@ final class RemoteFoodItemsApiTests: XCTestCase {
         XCTAssertNotNil(loader)
     }
     
-    @MainActor
-    func testSUT_loadFoodItemsTriggersLoadingURL() async {
+    func testSUT_loadFoodItemsTriggersLoadingURL() async throws {
         let url = URL(string: "www.sampleUrl.com")!
         let (loader, client) = makeSUT(url: url)
-        let _ = await loader.loadFoodItems()
+        XCTAssertEqual(client.loadedURLs, [], "client should not load any urls initially")
+        let _ = try await loader.loadFoodItems()
         XCTAssertEqual(client.loadedURLs, [url])
     }
+    
+    func testSUT_LoaderFailsWhenClientFails() async throws {
+        let url = URL(string: "https://www.sampleUrl.com")!
+        let (loader, client) = makeSUT(url: url)
+        let triggeredError = NSError(domain: "triggeredError", code: 1)
+        client.triggerError = triggeredError
+        
+        do {
+            _ = try await loader.loadFoodItems()
+            XCTFail("Expected error, but loader completed successfully")
+        } catch {
+            XCTAssertEqual(error as NSError, triggeredError, "Expected the triggered error to be thrown.")
+        }
+        
+        XCTAssertEqual(client.loadedURLs, [url], "The loader should have attempted loading from the specified URL.")
+    }
+    
 
     private func makeSUT(url: URL = URL(string: "www.aUrl.com")!) -> (RemoteFoodItemsLoader, HTTPClientSpy) {
         let client = HTTPClientSpy()
@@ -32,9 +50,13 @@ final class RemoteFoodItemsApiTests: XCTestCase {
 
 private final class HTTPClientSpy: HTTPClient {
     var loadedURLs: [URL] = []
+    var triggerError: Error?
     
-    func loadURL(url: URL) async -> Data {
+    func loadURL(url: URL) async throws -> Data {
         loadedURLs.append(url)
+        if let triggerError {
+            throw triggerError
+        }
         return Data()
     }
 }

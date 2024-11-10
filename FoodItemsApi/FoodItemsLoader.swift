@@ -8,11 +8,11 @@
 import Foundation
 
 protocol FoodItemsLoader {
-    func loadFoodItems() async -> [FoodItem]
+    func loadFoodItems() async throws -> [FoodItem]
 }
 
 protocol HTTPClient {
-    func loadURL(url: URL) async -> Data
+    func loadURL(url: URL) async throws -> Data
 }
 
 class RemoteFoodItemsLoader: FoodItemsLoader {
@@ -24,8 +24,8 @@ class RemoteFoodItemsLoader: FoodItemsLoader {
         self.client = client
     }
     
-    func loadFoodItems() async -> [FoodItem] {
-        await client.loadURL(url: url)
+    func loadFoodItems() async throws -> [FoodItem] {
+        let _ = try await client.loadURL(url: url)
         return []
     }
     
