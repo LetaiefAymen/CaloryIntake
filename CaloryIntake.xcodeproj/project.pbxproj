@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */; };
 		E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */; };
 		E1CC2AC62CE0A218003314C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC52CE0A218003314C1 /* ContentView.swift */; };
 		E1CC2AC82CE0A21C003314C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CC2AC72CE0A21C003314C1 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		E1CC2AC02CE0A218003314C1 /* CaloryIntake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloryIntake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeApp.swift; sourceTree = "<group>"; };
 		E1CC2AC52CE0A218003314C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E13A86A42CE111ED00CA6321 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
 		E1CC2AB72CE0A218003314C1 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 		E1CC2B4A2CE0B150003314C1 /* FoodItemsApi */ = {
 			isa = PBXGroup;
 			children = (
+				E13A86A42CE111ED00CA6321 /* client */,
 				E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */,
 				E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */,
 			);
@@ -419,6 +430,7 @@
 			files = (
 				E1CC2B5E2CE0B199003314C1 /* FoodItem.swift in Sources */,
 				E1CC2B5F2CE0B199003314C1 /* FoodItemsLoader.swift in Sources */,
+				E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

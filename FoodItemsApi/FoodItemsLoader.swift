@@ -11,10 +11,6 @@ protocol FoodItemsLoader {
     func loadFoodItems() async throws -> [FoodItem]
 }
 
-protocol HTTPClient {
-    func loadURL(url: URL) async throws -> (Data, URLResponse)
-}
-
 enum RemoteFoodItemError: Error, Equatable {
     case invalidResponse
     case parsingError(reason: String)
