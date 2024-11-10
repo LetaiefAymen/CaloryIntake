@@ -12,7 +12,11 @@ protocol FoodItemsLoader {
 }
 
 protocol HTTPClient {
-    func loadURL(url: URL) async throws -> Data
+    func loadURL(url: URL) async throws -> (Data, URLResponse)
+}
+
+enum RemoteFoodItemError: Error {
+    case invalidResponseCode
 }
 
 class RemoteFoodItemsLoader: FoodItemsLoader {
@@ -25,7 +29,12 @@ class RemoteFoodItemsLoader: FoodItemsLoader {
     }
     
     func loadFoodItems() async throws -> [FoodItem] {
-        let _ = try await client.loadURL(url: url)
+        let (_, response) = try await client.loadURL(url: url)
+        if let response = response as? HTTPURLResponse {
+            if response.statusCode != 200 {
+                throw RemoteFoodItemError.invalidResponseCode
+            }
+        }
         return []
     }
     
