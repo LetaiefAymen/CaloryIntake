@@ -16,7 +16,7 @@ public enum RemoteFoodItemError: Error, Equatable {
     case parsingError(reason: String)
 }
 
-open class RemoteFoodItemsLoader: FoodItemsLoader {
+public final class RemoteFoodItemsLoader: FoodItemsLoader {
     let client: HTTPClient
     let url: URL
     
