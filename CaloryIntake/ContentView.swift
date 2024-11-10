@@ -6,21 +6,57 @@
 //
 
 import SwiftUI
-
+import FoodItemsApi
 struct ContentView: View {
+    @ObservedObject
+    var viewModel: CaloryIntakeViewModel
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        contentView
+            .onAppear {
+                viewModel.loadItems()
+            }
+    }
+    
+    var contentView: some View {
+        NavigationView {
+            VStack {
+                if viewModel.foodItems.isEmpty {
+                    ProgressView("Loading...")
+                } else {
+                    List(viewModel.foodItems, id: \.name) { foodItem in
+                        FoodItemRow(foodItem: foodItem)
+                    }
+                }
+            }
+            .navigationTitle("Calorie Tracker")
         }
-        .padding()
     }
 }
 
+struct FoodItemRow: View {
+    var foodItem: FoodItem
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(foodItem.name)
+                .font(.headline)
+            HStack {
+                Text("Calories: \(foodItem.caloryCount) kcal")
+                Text("Protein: \(foodItem.proteinCount, specifier: "%.1f") g")
+                Text("Fat: \(foodItem.fatCount, specifier: "%.1f") g")
+                
+            }
+            .font(.subheadline)
+            .foregroundColor(.secondary)
+        }
+        .padding(.vertical, 8)
+    }
+}
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: CaloryIntakeViewModel())
     }
 }

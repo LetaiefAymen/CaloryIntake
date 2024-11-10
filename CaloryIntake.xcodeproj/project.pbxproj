@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */; };
+		E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */; };
+		E13A86B32CE1174900CA6321 /* FoodItemsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */; };
+		E13A86B42CE1174900CA6321 /* FoodItemsApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86B82CE1330F00CA6321 /* Environment.swift */; };
 		E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */; };
 		E1CC2AC62CE0A218003314C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC52CE0A218003314C1 /* ContentView.swift */; };
 		E1CC2AC82CE0A21C003314C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CC2AC72CE0A21C003314C1 /* Assets.xcassets */; };
@@ -22,6 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E13A86B52CE1174900CA6321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1CC2B482CE0B150003314C1;
+			remoteInfo = FoodItemsApi;
+		};
 		E1CC2AD12CE0A21C003314C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
@@ -46,12 +57,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E1CC2B0C2CE0A7F4003314C1 /* Embed Frameworks */ = {
+		E13A86B72CE1174A00CA6321 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E13A86B42CE1174900CA6321 /* FoodItemsApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
+		E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeViewModel.swift; sourceTree = "<group>"; };
+		E13A86B82CE1330F00CA6321 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		E1CC2AC02CE0A218003314C1 /* CaloryIntake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloryIntake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeApp.swift; sourceTree = "<group>"; };
 		E1CC2AC52CE0A218003314C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E13A86B32CE1174900CA6321 /* FoodItemsApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +140,13 @@
 			path = client;
 			sourceTree = "<group>";
 		};
+		E13A86A92CE1152F00CA6321 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E1CC2AB72CE0A218003314C1 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +156,7 @@
 				E1CC2B4A2CE0B150003314C1 /* FoodItemsApi */,
 				E1CC2B542CE0B150003314C1 /* FoodItemsApiTests */,
 				E1CC2AC12CE0A218003314C1 /* Products */,
+				E13A86A92CE1152F00CA6321 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,6 +175,8 @@
 		E1CC2AC22CE0A218003314C1 /* CaloryIntake */ = {
 			isa = PBXGroup;
 			children = (
+				E13A86B82CE1330F00CA6321 /* Environment.swift */,
+				E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */,
 				E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */,
 				E1CC2AC52CE0A218003314C1 /* ContentView.swift */,
 				E1CC2AC72CE0A21C003314C1 /* Assets.xcassets */,
@@ -223,11 +248,12 @@
 				E1CC2ABC2CE0A218003314C1 /* Sources */,
 				E1CC2ABD2CE0A218003314C1 /* Frameworks */,
 				E1CC2ABE2CE0A218003314C1 /* Resources */,
-				E1CC2B0C2CE0A7F4003314C1 /* Embed Frameworks */,
+				E13A86B72CE1174A00CA6321 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E13A86B62CE1174900CA6321 /* PBXTargetDependency */,
 			);
 			name = CaloryIntake;
 			productName = CaloryIntake;
@@ -403,7 +429,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1CC2AC62CE0A218003314C1 /* ContentView.swift in Sources */,
+				E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */,
 				E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */,
+				E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +473,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E13A86B62CE1174900CA6321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1CC2B482CE0B150003314C1 /* FoodItemsApi */;
+			targetProxy = E13A86B52CE1174900CA6321 /* PBXContainerItemProxy */;
+		};
 		E1CC2AD22CE0A21C003314C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E1CC2ABF2CE0A218003314C1 /* CaloryIntake */;
@@ -736,8 +769,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -768,8 +805,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

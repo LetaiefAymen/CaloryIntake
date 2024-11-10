@@ -7,25 +7,25 @@
 
 import Foundation
 
-protocol FoodItemsLoader {
+public protocol FoodItemsLoader {
     func loadFoodItems() async throws -> [FoodItem]
 }
 
-enum RemoteFoodItemError: Error, Equatable {
+public enum RemoteFoodItemError: Error, Equatable {
     case invalidResponse
     case parsingError(reason: String)
 }
 
-class RemoteFoodItemsLoader: FoodItemsLoader {
+open class RemoteFoodItemsLoader: FoodItemsLoader {
     let client: HTTPClient
     let url: URL
     
-    init(url: URL, client: HTTPClient) {
+    public init(url: URL, client: HTTPClient) {
         self.url = url
         self.client = client
     }
     
-    func loadFoodItems() async throws -> [FoodItem] {
+    public func loadFoodItems() async throws -> [FoodItem] {
         let (data, response) = try await client.loadURL(url: url)
         if let response = response as? HTTPURLResponse {
             return try FoodItemsResultMapper.map(data, from: response)

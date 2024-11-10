@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HTTPClient {
+public protocol HTTPClient {
     func loadURL(url: URL) async throws -> (Data, URLResponse)
 }
 
@@ -19,7 +19,7 @@ public final class URLSessionHTTPClient: HTTPClient {
         self.session = session
     }
     
-    func loadURL(url: URL) async throws -> (Data, URLResponse) {
+    public func loadURL(url: URL) async throws -> (Data, URLResponse) {
         try await session.data(from: url)
     }
 }

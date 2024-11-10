@@ -5,11 +5,11 @@
 //  Created by Aymen Letaief on 2024-11-10.
 //
 
-struct FoodItem: Decodable, Equatable {
-    let name: String
-    let caloryCount: Int
-    let proteinCount: Double
-    let fatCount: Double
+public struct FoodItem: Decodable, Equatable {
+    public let name: String
+    public let caloryCount: Int
+    public let proteinCount: Double
+    public let fatCount: Double
     
     enum CodingKeys: String, CodingKey {
         case name = "food_name"
