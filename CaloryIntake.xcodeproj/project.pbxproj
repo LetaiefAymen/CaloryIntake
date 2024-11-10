@@ -15,7 +15,7 @@
 		E1CC2ADF2CE0A21C003314C1 /* CaloryIntakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2ADE2CE0A21C003314C1 /* CaloryIntakeUITests.swift */; };
 		E1CC2AE12CE0A21C003314C1 /* CaloryIntakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AE02CE0A21C003314C1 /* CaloryIntakeUITestsLaunchTests.swift */; };
 		E1CC2B512CE0B150003314C1 /* FoodItemsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */; };
-		E1CC2B562CE0B150003314C1 /* FoodItemsApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */; };
+		E1CC2B562CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */; };
 		E1CC2B5E2CE0B199003314C1 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */; };
 		E1CC2B5F2CE0B199003314C1 /* FoodItemsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */; };
 /* End PBXBuildFile section */
@@ -72,7 +72,7 @@
 		E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsLoader.swift; sourceTree = "<group>"; };
 		E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodItemsApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CC2B502CE0B150003314C1 /* FoodItemsApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodItemsApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsApiTests.swift; sourceTree = "<group>"; };
+		E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFoodItemsLoaderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,7 +187,7 @@
 		E1CC2B542CE0B150003314C1 /* FoodItemsApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */,
+				E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */,
 			);
 			path = FoodItemsApiTests;
 			sourceTree = "<group>";
@@ -426,7 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CC2B562CE0B150003314C1 /* FoodItemsApiTests.swift in Sources */,
+				E1CC2B562CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import XCTest
 @testable import FoodItemsApi
 
 @MainActor
-final class RemoteFoodItemsApiTests: XCTestCase {
+final class RemoteFoodItemsLoaderTests: XCTestCase {
     
     func testSUT_LoaderisNotNil() {
         let (loader, _) = makeSUT()
