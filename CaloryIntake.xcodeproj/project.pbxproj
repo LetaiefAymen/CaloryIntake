@@ -14,10 +14,10 @@
 		E1CC2AD52CE0A21C003314C1 /* CaloryIntakeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AD42CE0A21C003314C1 /* CaloryIntakeTests.swift */; };
 		E1CC2ADF2CE0A21C003314C1 /* CaloryIntakeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2ADE2CE0A21C003314C1 /* CaloryIntakeUITests.swift */; };
 		E1CC2AE12CE0A21C003314C1 /* CaloryIntakeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AE02CE0A21C003314C1 /* CaloryIntakeUITestsLaunchTests.swift */; };
-		E1CC2AFC2CE0A7F4003314C1 /* FoodApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */; };
-		E1CC2B032CE0A7F4003314C1 /* FoodApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B022CE0A7F4003314C1 /* FoodApiTests.swift */; };
-		E1CC2B072CE0A7F4003314C1 /* FoodApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */; };
-		E1CC2B082CE0A7F4003314C1 /* FoodApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E1CC2B512CE0B150003314C1 /* FoodItemsApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */; };
+		E1CC2B562CE0B150003314C1 /* FoodItemsApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */; };
+		E1CC2B5E2CE0B199003314C1 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */; };
+		E1CC2B5F2CE0B199003314C1 /* FoodItemsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,26 +35,12 @@
 			remoteGlobalIDString = E1CC2ABF2CE0A218003314C1;
 			remoteInfo = CaloryIntake;
 		};
-		E1CC2AFD2CE0A7F4003314C1 /* PBXContainerItemProxy */ = {
+		E1CC2B522CE0B150003314C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E1CC2AF12CE0A7F3003314C1;
-			remoteInfo = FoodApi;
-		};
-		E1CC2AFF2CE0A7F4003314C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1CC2ABF2CE0A218003314C1;
-			remoteInfo = CaloryIntake;
-		};
-		E1CC2B052CE0A7F4003314C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1CC2AF12CE0A7F3003314C1;
-			remoteInfo = FoodApi;
+			remoteGlobalIDString = E1CC2B482CE0B150003314C1;
+			remoteInfo = FoodItemsApi;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,7 +51,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E1CC2B082CE0A7F4003314C1 /* FoodApi.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,9 +68,11 @@
 		E1CC2ADA2CE0A21C003314C1 /* CaloryIntakeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaloryIntakeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CC2ADE2CE0A21C003314C1 /* CaloryIntakeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeUITests.swift; sourceTree = "<group>"; };
 		E1CC2AE02CE0A21C003314C1 /* CaloryIntakeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1CC2AFB2CE0A7F3003314C1 /* FoodApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1CC2B022CE0A7F4003314C1 /* FoodApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodApiTests.swift; sourceTree = "<group>"; };
+		E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsLoader.swift; sourceTree = "<group>"; };
+		E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FoodItemsApi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CC2B502CE0B150003314C1 /* FoodItemsApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodItemsApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsApiTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +80,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CC2B072CE0A7F4003314C1 /* FoodApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,18 +97,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AEF2CE0A7F3003314C1 /* Frameworks */ = {
+		E1CC2B462CE0B150003314C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AF82CE0A7F3003314C1 /* Frameworks */ = {
+		E1CC2B4D2CE0B150003314C1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CC2AFC2CE0A7F4003314C1 /* FoodApi.framework in Frameworks */,
+				E1CC2B512CE0B150003314C1 /* FoodItemsApi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +121,8 @@
 				E1CC2AC22CE0A218003314C1 /* CaloryIntake */,
 				E1CC2AD32CE0A21C003314C1 /* CaloryIntakeTests */,
 				E1CC2ADD2CE0A21C003314C1 /* CaloryIntakeUITests */,
-				E1CC2AF32CE0A7F3003314C1 /* FoodApi */,
-				E1CC2B012CE0A7F4003314C1 /* FoodApiTests */,
+				E1CC2B4A2CE0B150003314C1 /* FoodItemsApi */,
+				E1CC2B542CE0B150003314C1 /* FoodItemsApiTests */,
 				E1CC2AC12CE0A218003314C1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -147,8 +133,8 @@
 				E1CC2AC02CE0A218003314C1 /* CaloryIntake.app */,
 				E1CC2AD02CE0A21C003314C1 /* CaloryIntakeTests.xctest */,
 				E1CC2ADA2CE0A21C003314C1 /* CaloryIntakeUITests.xctest */,
-				E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */,
-				E1CC2AFB2CE0A7F3003314C1 /* FoodApiTests.xctest */,
+				E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */,
+				E1CC2B502CE0B150003314C1 /* FoodItemsApiTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -189,25 +175,27 @@
 			path = CaloryIntakeUITests;
 			sourceTree = "<group>";
 		};
-		E1CC2AF32CE0A7F3003314C1 /* FoodApi */ = {
+		E1CC2B4A2CE0B150003314C1 /* FoodItemsApi */ = {
 			isa = PBXGroup;
 			children = (
+				E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */,
+				E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */,
 			);
-			path = FoodApi;
+			path = FoodItemsApi;
 			sourceTree = "<group>";
 		};
-		E1CC2B012CE0A7F4003314C1 /* FoodApiTests */ = {
+		E1CC2B542CE0B150003314C1 /* FoodItemsApiTests */ = {
 			isa = PBXGroup;
 			children = (
-				E1CC2B022CE0A7F4003314C1 /* FoodApiTests.swift */,
+				E1CC2B552CE0B150003314C1 /* FoodItemsApiTests.swift */,
 			);
-			path = FoodApiTests;
+			path = FoodItemsApiTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		E1CC2AED2CE0A7F3003314C1 /* Headers */ = {
+		E1CC2B442CE0B150003314C1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,7 +217,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E1CC2B062CE0A7F4003314C1 /* PBXTargetDependency */,
 			);
 			name = CaloryIntake;
 			productName = CaloryIntake;
@@ -272,41 +259,40 @@
 			productReference = E1CC2ADA2CE0A21C003314C1 /* CaloryIntakeUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		E1CC2AF12CE0A7F3003314C1 /* FoodApi */ = {
+		E1CC2B482CE0B150003314C1 /* FoodItemsApi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1CC2B092CE0A7F4003314C1 /* Build configuration list for PBXNativeTarget "FoodApi" */;
+			buildConfigurationList = E1CC2B582CE0B150003314C1 /* Build configuration list for PBXNativeTarget "FoodItemsApi" */;
 			buildPhases = (
-				E1CC2AED2CE0A7F3003314C1 /* Headers */,
-				E1CC2AEE2CE0A7F3003314C1 /* Sources */,
-				E1CC2AEF2CE0A7F3003314C1 /* Frameworks */,
-				E1CC2AF02CE0A7F3003314C1 /* Resources */,
+				E1CC2B442CE0B150003314C1 /* Headers */,
+				E1CC2B452CE0B150003314C1 /* Sources */,
+				E1CC2B462CE0B150003314C1 /* Frameworks */,
+				E1CC2B472CE0B150003314C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = FoodApi;
-			productName = FoodApi;
-			productReference = E1CC2AF22CE0A7F3003314C1 /* FoodApi.framework */;
+			name = FoodItemsApi;
+			productName = FoodItemsApi;
+			productReference = E1CC2B492CE0B150003314C1 /* FoodItemsApi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E1CC2AFA2CE0A7F3003314C1 /* FoodApiTests */ = {
+		E1CC2B4F2CE0B150003314C1 /* FoodItemsApiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E1CC2B0D2CE0A7F4003314C1 /* Build configuration list for PBXNativeTarget "FoodApiTests" */;
+			buildConfigurationList = E1CC2B5B2CE0B150003314C1 /* Build configuration list for PBXNativeTarget "FoodItemsApiTests" */;
 			buildPhases = (
-				E1CC2AF72CE0A7F3003314C1 /* Sources */,
-				E1CC2AF82CE0A7F3003314C1 /* Frameworks */,
-				E1CC2AF92CE0A7F3003314C1 /* Resources */,
+				E1CC2B4C2CE0B150003314C1 /* Sources */,
+				E1CC2B4D2CE0B150003314C1 /* Frameworks */,
+				E1CC2B4E2CE0B150003314C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E1CC2AFE2CE0A7F4003314C1 /* PBXTargetDependency */,
-				E1CC2B002CE0A7F4003314C1 /* PBXTargetDependency */,
+				E1CC2B532CE0B150003314C1 /* PBXTargetDependency */,
 			);
-			name = FoodApiTests;
-			productName = FoodApiTests;
-			productReference = E1CC2AFB2CE0A7F3003314C1 /* FoodApiTests.xctest */;
+			name = FoodItemsApiTests;
+			productName = FoodItemsApiTests;
+			productReference = E1CC2B502CE0B150003314C1 /* FoodItemsApiTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -330,13 +316,11 @@
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = E1CC2ABF2CE0A218003314C1;
 					};
-					E1CC2AF12CE0A7F3003314C1 = {
+					E1CC2B482CE0B150003314C1 = {
 						CreatedOnToolsVersion = 14.2;
-						LastSwiftMigration = 1420;
 					};
-					E1CC2AFA2CE0A7F3003314C1 = {
+					E1CC2B4F2CE0B150003314C1 = {
 						CreatedOnToolsVersion = 14.2;
-						TestTargetID = E1CC2ABF2CE0A218003314C1;
 					};
 				};
 			};
@@ -356,8 +340,8 @@
 				E1CC2ABF2CE0A218003314C1 /* CaloryIntake */,
 				E1CC2ACF2CE0A21C003314C1 /* CaloryIntakeTests */,
 				E1CC2AD92CE0A21C003314C1 /* CaloryIntakeUITests */,
-				E1CC2AF12CE0A7F3003314C1 /* FoodApi */,
-				E1CC2AFA2CE0A7F3003314C1 /* FoodApiTests */,
+				E1CC2B482CE0B150003314C1 /* FoodItemsApi */,
+				E1CC2B4F2CE0B150003314C1 /* FoodItemsApiTests */,
 			);
 		};
 /* End PBXProject section */
@@ -386,14 +370,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AF02CE0A7F3003314C1 /* Resources */ = {
+		E1CC2B472CE0B150003314C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AF92CE0A7F3003314C1 /* Resources */ = {
+		E1CC2B4E2CE0B150003314C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -429,18 +413,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AEE2CE0A7F3003314C1 /* Sources */ = {
+		E1CC2B452CE0B150003314C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1CC2B5E2CE0B199003314C1 /* FoodItem.swift in Sources */,
+				E1CC2B5F2CE0B199003314C1 /* FoodItemsLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E1CC2AF72CE0A7F3003314C1 /* Sources */ = {
+		E1CC2B4C2CE0B150003314C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1CC2B032CE0A7F4003314C1 /* FoodApiTests.swift in Sources */,
+				E1CC2B562CE0B150003314C1 /* FoodItemsApiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,20 +443,10 @@
 			target = E1CC2ABF2CE0A218003314C1 /* CaloryIntake */;
 			targetProxy = E1CC2ADB2CE0A21C003314C1 /* PBXContainerItemProxy */;
 		};
-		E1CC2AFE2CE0A7F4003314C1 /* PBXTargetDependency */ = {
+		E1CC2B532CE0B150003314C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E1CC2AF12CE0A7F3003314C1 /* FoodApi */;
-			targetProxy = E1CC2AFD2CE0A7F4003314C1 /* PBXContainerItemProxy */;
-		};
-		E1CC2B002CE0A7F4003314C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1CC2ABF2CE0A218003314C1 /* CaloryIntake */;
-			targetProxy = E1CC2AFF2CE0A7F4003314C1 /* PBXContainerItemProxy */;
-		};
-		E1CC2B062CE0A7F4003314C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E1CC2AF12CE0A7F3003314C1 /* FoodApi */;
-			targetProxy = E1CC2B052CE0A7F4003314C1 /* PBXContainerItemProxy */;
+			target = E1CC2B482CE0B150003314C1 /* FoodItemsApi */;
+			targetProxy = E1CC2B522CE0B150003314C1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -723,11 +699,11 @@
 			};
 			name = Release;
 		};
-		E1CC2B0A2CE0A7F4003314C1 /* Debug */ = {
+		E1CC2B592CE0B150003314C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 87P3C2FUMS;
@@ -737,37 +713,29 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodApi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodItemsApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = auto;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		E1CC2B0B2CE0A7F4003314C1 /* Release */ = {
+		E1CC2B5A2CE0B150003314C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 87P3C2FUMS;
@@ -777,24 +745,17 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = (
+					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodApi;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodItemsApi;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = auto;
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = macosx;
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -802,45 +763,39 @@
 			};
 			name = Release;
 		};
-		E1CC2B0E2CE0A7F4003314C1 /* Debug */ = {
+		E1CC2B5C2CE0B150003314C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87P3C2FUMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodApiTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodItemsApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaloryIntake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CaloryIntake";
 			};
 			name = Debug;
 		};
-		E1CC2B0F2CE0A7F4003314C1 /* Release */ = {
+		E1CC2B5D2CE0B150003314C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87P3C2FUMS;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MACOSX_DEPLOYMENT_TARGET = 12.7;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodApiTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.logicmind.FoodItemsApiTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CaloryIntake.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CaloryIntake";
 			};
 			name = Release;
 		};
@@ -883,20 +838,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1CC2B092CE0A7F4003314C1 /* Build configuration list for PBXNativeTarget "FoodApi" */ = {
+		E1CC2B582CE0B150003314C1 /* Build configuration list for PBXNativeTarget "FoodItemsApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1CC2B0A2CE0A7F4003314C1 /* Debug */,
-				E1CC2B0B2CE0A7F4003314C1 /* Release */,
+				E1CC2B592CE0B150003314C1 /* Debug */,
+				E1CC2B5A2CE0B150003314C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E1CC2B0D2CE0A7F4003314C1 /* Build configuration list for PBXNativeTarget "FoodApiTests" */ = {
+		E1CC2B5B2CE0B150003314C1 /* Build configuration list for PBXNativeTarget "FoodItemsApiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E1CC2B0E2CE0A7F4003314C1 /* Debug */,
-				E1CC2B0F2CE0A7F4003314C1 /* Release */,
+				E1CC2B5C2CE0B150003314C1 /* Debug */,
+				E1CC2B5D2CE0B150003314C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
