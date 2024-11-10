@@ -147,6 +147,46 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E13A86BC2CE15F1F00CA6321 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC2AC52CE0A218003314C1 /* ContentView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		E13A86BD2CE15F2D00CA6321 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		E13A86BE2CE15F3D00CA6321 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E13A86B82CE1330F00CA6321 /* Environment.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
+		E13A86BF2CE15F6600CA6321 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		E13A86C02CE15F7600CA6321 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		E1CC2AB72CE0A218003314C1 = {
 			isa = PBXGroup;
 			children = (
@@ -175,10 +215,10 @@
 		E1CC2AC22CE0A218003314C1 /* CaloryIntake */ = {
 			isa = PBXGroup;
 			children = (
-				E13A86B82CE1330F00CA6321 /* Environment.swift */,
-				E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */,
+				E13A86BE2CE15F3D00CA6321 /* helpers */,
+				E13A86BD2CE15F2D00CA6321 /* viewmodels */,
+				E13A86BC2CE15F1F00CA6321 /* views */,
 				E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */,
-				E1CC2AC52CE0A218003314C1 /* ContentView.swift */,
 				E1CC2AC72CE0A21C003314C1 /* Assets.xcassets */,
 				E1CC2AC92CE0A21C003314C1 /* Preview Content */,
 			);
@@ -213,9 +253,9 @@
 		E1CC2B4A2CE0B150003314C1 /* FoodItemsApi */ = {
 			isa = PBXGroup;
 			children = (
+				E13A86C02CE15F7600CA6321 /* helpers */,
+				E13A86BF2CE15F6600CA6321 /* models */,
 				E13A86A42CE111ED00CA6321 /* client */,
-				E1CC2B122CE0ABD6003314C1 /* FoodItem.swift */,
-				E1CC2B162CE0AC80003314C1 /* FoodItemsLoader.swift */,
 			);
 			path = FoodItemsApi;
 			sourceTree = "<group>";
