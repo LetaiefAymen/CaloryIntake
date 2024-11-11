@@ -7,23 +7,8 @@
 
 import Foundation
 
-//
-//protocol MealStoreHelper {
-//    func persist(mealEntry: LocalMealEntry) async -> Bool
-//    func retrieveMeals() async -> [LocalMealEntry]
-//    func deleteMeals() async -> Bool
-//}
-//
-//class CoreDataMealStoreHelper: MealStoreHelper {
-//    func persist(mealEntry: LocalMealEntry) async -> Bool {
-//        true
-//    }
-//
-//    func retrieveMeals() async -> [LocalMealEntry] {
-//        []
-//    }
-//
-//    func deleteMeals() async -> Bool {
-//        true
-//    }
-//}
+protocol MealStoreHelper {
+    func persist(mealEntry: MealEntry) async -> Bool
+    func retrieveMeals() async -> [MealEntry]
+    func deleteMeals() async -> Bool
+}

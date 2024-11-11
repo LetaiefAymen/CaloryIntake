@@ -10,11 +10,10 @@ import Foundation
 import CoreData
 
 @objc(ManagedMealEntry)
-public class ManagedMealEntry: NSManagedObject {
-
-    @NSManaged public var id: UUID?
-    @NSManaged public var name: String?
-    @NSManaged public var fooditems: NSSet?
+class ManagedMealEntry: NSManagedObject {
+    @NSManaged var id: UUID
+    @NSManaged var name: String
+    @NSManaged var fooditems: NSOrderedSet?
 }
 
 extension ManagedMealEntry {
@@ -23,19 +22,17 @@ extension ManagedMealEntry {
     }
 }
 
-// MARK: Generated accessors for fooditems
 extension ManagedMealEntry {
-
-    @objc(addFooditemsObject:)
-    @NSManaged public func addToFooditems(_ value: ManagedFoodItem)
-
-    @objc(removeFooditemsObject:)
-    @NSManaged public func removeFromFooditems(_ value: ManagedFoodItem)
-
-    @objc(addFooditems:)
-    @NSManaged public func addToFooditems(_ values: NSSet)
-
-    @objc(removeFooditems:)
-    @NSManaged public func removeFromFooditems(_ values: NSSet)
-
+    public func toMealEntry() -> MealEntry {
+        let foodItemsArray = (fooditems?.array as? [ManagedFoodItem])?.map { $0.toFoodItem() } ?? []
+        return MealEntry(id: id, mealName: name, foodItems: foodItemsArray)
+    }
+    
+    public static func from(mealEntry: MealEntry, in context: NSManagedObjectContext) -> ManagedMealEntry {
+        let managedMeal = ManagedMealEntry(context: context)
+        managedMeal.id = mealEntry.id
+        managedMeal.name = mealEntry.mealName
+        managedMeal.fooditems = NSOrderedSet(array: mealEntry.foodItems.map { ManagedFoodItem.from(foodItem: $0, in: context) })
+        return managedMeal
+    }
 }

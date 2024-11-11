@@ -12,13 +12,15 @@
 		E13A86B32CE1174900CA6321 /* CaloryIntakeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; };
 		E13A86B42CE1174900CA6321 /* CaloryIntakeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86B82CE1330F00CA6321 /* Environment.swift */; };
-		E13A87152CE2196700CA6321 /* FoodItemsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86DA2CE164F100CA6321 /* FoodItemsStoreTests.swift */; };
+		E13A87152CE2196700CA6321 /* CoreDataMealStoreHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */; };
 		E13A87162CE2198500CA6321 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A86E72CE1650900CA6321 /* CoreData.framework */; };
 		E13A871A2CE21AEA00CA6321 /* MealEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A87182CE21AD700CA6321 /* MealEntry.swift */; };
 		E13A871C2CE21CDF00CA6321 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A871B2CE21CDF00CA6321 /* FoodItem.swift */; };
 		E13A871D2CE21F9200CA6321 /* ManagedMealEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A87092CE20D8B00CA6321 /* ManagedMealEntry.swift */; };
 		E13A871E2CE21F9400CA6321 /* ManagedFoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A870B2CE20D8B00CA6321 /* ManagedFoodItem.swift */; };
-		E13A871F2CE21F9B00CA6321 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E13A86F62CE208F200CA6321 /* Database.xcdatamodeld */; };
+		E13A871F2CE21F9B00CA6321 /* CaloryIntake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E13A86F62CE208F200CA6321 /* CaloryIntake.xcdatamodeld */; };
+		E13A87212CE225BD00CA6321 /* MealStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86E92CE1659200CA6321 /* MealStoreHelper.swift */; };
+		E13A872B2CE2812900CA6321 /* CoreDataMealStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A872A2CE2812900CA6321 /* CoreDataMealStoreHelper.swift */; };
 		E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */; };
 		E1CC2AC62CE0A218003314C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CC2AC52CE0A218003314C1 /* ContentView.swift */; };
 		E1CC2AC82CE0A21C003314C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1CC2AC72CE0A21C003314C1 /* Assets.xcassets */; };
@@ -81,7 +83,7 @@
 		E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeViewModel.swift; sourceTree = "<group>"; };
 		E13A86B82CE1330F00CA6321 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
-		E13A86DA2CE164F100CA6321 /* FoodItemsStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemsStoreTests.swift; sourceTree = "<group>"; };
+		E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMealStoreHelperTests.swift; sourceTree = "<group>"; };
 		E13A86E72CE1650900CA6321 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E13A86E92CE1659200CA6321 /* MealStoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStoreHelper.swift; sourceTree = "<group>"; };
 		E13A86F72CE208F200CA6321 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		E13A870B2CE20D8B00CA6321 /* ManagedFoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedFoodItem.swift; sourceTree = "<group>"; };
 		E13A87182CE21AD700CA6321 /* MealEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealEntry.swift; sourceTree = "<group>"; };
 		E13A871B2CE21CDF00CA6321 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		E13A872A2CE2812900CA6321 /* CoreDataMealStoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMealStoreHelper.swift; sourceTree = "<group>"; };
 		E1CC2AC02CE0A218003314C1 /* CaloryIntake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaloryIntake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1CC2AC32CE0A218003314C1 /* CaloryIntakeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeApp.swift; sourceTree = "<group>"; };
 		E1CC2AC52CE0A218003314C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -206,7 +209,8 @@
 		E13A87112CE20DC300CA6321 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
-				E13A86F62CE208F200CA6321 /* Database.xcdatamodeld */,
+				E13A872A2CE2812900CA6321 /* CoreDataMealStoreHelper.swift */,
+				E13A86F62CE208F200CA6321 /* CaloryIntake.xcdatamodeld */,
 				E13A87122CE20DCB00CA6321 /* entities */,
 			);
 			path = coredata;
@@ -335,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */,
-				E13A86DA2CE164F100CA6321 /* FoodItemsStoreTests.swift */,
+				E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */,
 			);
 			path = CaloryIntakeCoreTests;
 			sourceTree = "<group>";
@@ -570,12 +574,14 @@
 			files = (
 				E1CC2B5E2CE0B199003314C1 /* RemoteFoodItem.swift in Sources */,
 				E1CC2B5F2CE0B199003314C1 /* FoodItemsLoader.swift in Sources */,
-				E13A871F2CE21F9B00CA6321 /* Database.xcdatamodeld in Sources */,
+				E13A87212CE225BD00CA6321 /* MealStoreHelper.swift in Sources */,
+				E13A871F2CE21F9B00CA6321 /* CaloryIntake.xcdatamodeld in Sources */,
 				E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */,
 				E13A871A2CE21AEA00CA6321 /* MealEntry.swift in Sources */,
 				E13A871C2CE21CDF00CA6321 /* FoodItem.swift in Sources */,
 				E13A871E2CE21F9400CA6321 /* ManagedFoodItem.swift in Sources */,
 				E13A871D2CE21F9200CA6321 /* ManagedMealEntry.swift in Sources */,
+				E13A872B2CE2812900CA6321 /* CoreDataMealStoreHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,7 +589,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13A87152CE2196700CA6321 /* FoodItemsStoreTests.swift in Sources */,
+				E13A87152CE2196700CA6321 /* CoreDataMealStoreHelperTests.swift in Sources */,
 				E1CC2B562CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1032,13 +1038,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E13A86F62CE208F200CA6321 /* Database.xcdatamodeld */ = {
+		E13A86F62CE208F200CA6321 /* CaloryIntake.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				E13A86F72CE208F200CA6321 /* Database.xcdatamodel */,
 			);
 			currentVersion = E13A86F72CE208F200CA6321 /* Database.xcdatamodel */;
-			path = Database.xcdatamodeld;
+			path = CaloryIntake.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
