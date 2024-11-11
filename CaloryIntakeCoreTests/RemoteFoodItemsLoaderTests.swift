@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import FoodItemsApi
+@testable import CaloryIntakeCore
 
 @MainActor
 final class RemoteFoodItemsLoaderTests: XCTestCase {
@@ -70,8 +70,8 @@ final class RemoteFoodItemsLoaderTests: XCTestCase {
         XCTAssertEqual(result, [foodItem1.model,foodItem2.model])
     }
     
-    private func makeItem(name: String, caloryCount: Int, proteinCount: Double, fatCount: Double) -> (model: FoodItem, json: [String: Any]) {
-        let item = FoodItem(name: name, caloryCount: caloryCount, proteinCount: proteinCount, fatCount: fatCount)
+    private func makeItem(name: String, caloryCount: Double, proteinCount: Double, fatCount: Double) -> (model: RemoteFoodItem, json: [String: Any]) {
+        let item = RemoteFoodItem(name: name, caloryCount: caloryCount, proteinCount: proteinCount, fatCount: fatCount)
 
         let json = [
             "food_name": name,

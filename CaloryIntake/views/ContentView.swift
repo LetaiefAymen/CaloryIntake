@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FoodItemsApi
+import CaloryIntakeCore
 struct ContentView: View {
     @ObservedObject
     var viewModel: CaloryIntakeViewModel
@@ -42,7 +42,7 @@ struct FoodItemRow: View {
             Text(foodItem.name)
                 .font(.headline)
             HStack {
-                Text("Calories: \(foodItem.caloryCount) kcal")
+                Text("Calories: \(Int(foodItem.caloryCount)) kcal")
                 Text("Protein: \(foodItem.proteinCount, specifier: "%.1f") g")
                 Text("Fat: \(foodItem.fatCount, specifier: "%.1f") g")
                 

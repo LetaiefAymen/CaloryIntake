@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FoodItemsApi
+import CaloryIntakeCore
 
 final class CaloryIntakeViewModel: ObservableObject {
     
@@ -27,7 +27,8 @@ final class CaloryIntakeViewModel: ObservableObject {
     func loadItems() {
         Task { @MainActor in
             do {
-                foodItems = try await loader.loadFoodItems()
+                let remoteFoodItems = try await loader.loadFoodItems()
+                foodItems = remoteFoodItems.map({ $0.toFoodItem() })
                 print(foodItems)
             } catch {
                 print("Error happened: \(error.localizedDescription)")

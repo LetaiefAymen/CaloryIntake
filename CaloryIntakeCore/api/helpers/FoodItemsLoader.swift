@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol FoodItemsLoader {
-    func loadFoodItems() async throws -> [FoodItem]
+    func loadFoodItems() async throws -> [RemoteFoodItem]
 }
 
 public enum RemoteFoodItemError: Error, Equatable {
@@ -25,7 +25,7 @@ public final class RemoteFoodItemsLoader: FoodItemsLoader {
         self.client = client
     }
     
-    public func loadFoodItems() async throws -> [FoodItem] {
+    public func loadFoodItems() async throws -> [RemoteFoodItem] {
         let (data, response) = try await client.loadURL(url: url)
         if let response = response as? HTTPURLResponse {
             return try FoodItemsResultMapper.map(data, from: response)
@@ -35,12 +35,12 @@ public final class RemoteFoodItemsLoader: FoodItemsLoader {
     }
     
     class FoodItemsResultMapper {
-        static func map(_ data: Data, from response: HTTPURLResponse) throws -> [FoodItem] {
+        static func map(_ data: Data, from response: HTTPURLResponse) throws -> [RemoteFoodItem] {
             guard response.statusCode == 200 else {
                 throw RemoteFoodItemError.invalidResponse
             }
             do {
-                let foodItems = try JSONDecoder().decode([FoodItem].self, from: data)
+                let foodItems = try JSONDecoder().decode([RemoteFoodItem].self, from: data)
                 return foodItems
             } catch {
                 throw RemoteFoodItemError.parsingError(reason: error.localizedDescription)
