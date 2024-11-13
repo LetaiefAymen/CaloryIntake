@@ -15,7 +15,7 @@ class InMemoryMealStoreHelperTests: XCTestCase, MealStoreHelperSpecs {
         let sut = makeSUT()
         await assertSUTPersistAndRetrieveMealEntryCorrectly(sut: sut)
     }
-    
+                                  
     func testDeleteMeals() async {
         let sut = makeSUT()
         await assertSUTDeleteMealsCorrectly(sut: sut)

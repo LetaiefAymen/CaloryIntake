@@ -10,10 +10,12 @@
 		E11FB3B02CE4F233006BD90B /* MealStoreHelperSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3AF2CE4F224006BD90B /* MealStoreHelperSpecs.swift */; };
 		E11FB3B52CE4F4C2006BD90B /* InMemoryMealStoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3B42CE4F4C2006BD90B /* InMemoryMealStoreHelper.swift */; };
 		E11FB3B72CE4F55B006BD90B /* InMemoryMealStoreHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3B62CE4F552006BD90B /* InMemoryMealStoreHelperTests.swift */; };
+		E11FB3BB2CE4FBB5006BD90B /* DailyIntakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3BA2CE4FBB2006BD90B /* DailyIntakeView.swift */; };
+		E11FB3BC2CE4FCE5006BD90B /* CaloryIntakeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; };
+		E11FB3BD2CE4FCE5006BD90B /* CaloryIntakeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E11FB3C22CE50AFC006BD90B /* DailyIntakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3C12CE50AFC006BD90B /* DailyIntakeViewModel.swift */; };
 		E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */; };
 		E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */; };
-		E13A86B32CE1174900CA6321 /* CaloryIntakeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; };
-		E13A86B42CE1174900CA6321 /* CaloryIntakeCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1CC2B492CE0B150003314C1 /* CaloryIntakeCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86B82CE1330F00CA6321 /* Environment.swift */; };
 		E13A87152CE2196700CA6321 /* CoreDataMealStoreHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */; };
 		E13A87162CE2198500CA6321 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A86E72CE1650900CA6321 /* CoreData.framework */; };
@@ -38,12 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E13A86B52CE1174900CA6321 /* PBXContainerItemProxy */ = {
+		E11FB3BE2CE4FCE5006BD90B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1CC2AB82CE0A218003314C1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = E1CC2B482CE0B150003314C1;
-			remoteInfo = FoodItemsApi;
+			remoteInfo = CaloryIntakeCore;
 		};
 		E1CC2AD12CE0A21C003314C1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -69,13 +71,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E13A86B72CE1174A00CA6321 /* Embed Frameworks */ = {
+		E11FB3C02CE4FCE5006BD90B /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E13A86B42CE1174900CA6321 /* CaloryIntakeCore.framework in Embed Frameworks */,
+				E11FB3BD2CE4FCE5006BD90B /* CaloryIntakeCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +89,8 @@
 		E11FB3AF2CE4F224006BD90B /* MealStoreHelperSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealStoreHelperSpecs.swift; sourceTree = "<group>"; };
 		E11FB3B42CE4F4C2006BD90B /* InMemoryMealStoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryMealStoreHelper.swift; sourceTree = "<group>"; };
 		E11FB3B62CE4F552006BD90B /* InMemoryMealStoreHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InMemoryMealStoreHelperTests.swift; sourceTree = "<group>"; };
+		E11FB3BA2CE4FBB2006BD90B /* DailyIntakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntakeView.swift; sourceTree = "<group>"; };
+		E11FB3C12CE50AFC006BD90B /* DailyIntakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntakeViewModel.swift; sourceTree = "<group>"; };
 		E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
 		E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeViewModel.swift; sourceTree = "<group>"; };
 		E13A86B82CE1330F00CA6321 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E13A86B32CE1174900CA6321 /* CaloryIntakeCore.framework in Frameworks */,
+				E11FB3BC2CE4FCE5006BD90B /* CaloryIntakeCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +178,24 @@
 			path = memory;
 			sourceTree = "<group>";
 		};
+		E11FB3B82CE4F826006BD90B /* api */ = {
+			isa = PBXGroup;
+			children = (
+				E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		E11FB3B92CE4F82F006BD90B /* store */ = {
+			isa = PBXGroup;
+			children = (
+				E11FB3AC2CE4F1DF006BD90B /* specs */,
+				E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */,
+				E11FB3B62CE4F552006BD90B /* InMemoryMealStoreHelperTests.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
 		E13A86A42CE111ED00CA6321 /* client */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +215,7 @@
 		E13A86BC2CE15F1F00CA6321 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				E11FB3BA2CE4FBB2006BD90B /* DailyIntakeView.swift */,
 				E1CC2AC52CE0A218003314C1 /* ContentView.swift */,
 			);
 			path = views;
@@ -201,6 +224,7 @@
 		E13A86BD2CE15F2D00CA6321 /* viewmodels */ = {
 			isa = PBXGroup;
 			children = (
+				E11FB3C12CE50AFC006BD90B /* DailyIntakeViewModel.swift */,
 				E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */,
 			);
 			path = viewmodels;
@@ -344,9 +368,9 @@
 		E1CC2B4A2CE0B150003314C1 /* CaloryIntakeCore */ = {
 			isa = PBXGroup;
 			children = (
+				E13A87132CE2190F00CA6321 /* api */,
 				E13A87172CE21ABF00CA6321 /* domain */,
 				E13A87142CE2192600CA6321 /* store */,
-				E13A87132CE2190F00CA6321 /* api */,
 			);
 			path = CaloryIntakeCore;
 			sourceTree = "<group>";
@@ -354,11 +378,9 @@
 		E1CC2B542CE0B150003314C1 /* CaloryIntakeCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				E11FB3B82CE4F826006BD90B /* api */,
+				E11FB3B92CE4F82F006BD90B /* store */,
 				E11FB3AB2CE4F1AC006BD90B /* CaloryIntakeCore.xctestplan */,
-				E11FB3AC2CE4F1DF006BD90B /* specs */,
-				E1CC2B552CE0B150003314C1 /* RemoteFoodItemsLoaderTests.swift */,
-				E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */,
-				E11FB3B62CE4F552006BD90B /* InMemoryMealStoreHelperTests.swift */,
 			);
 			path = CaloryIntakeCoreTests;
 			sourceTree = "<group>";
@@ -383,12 +405,12 @@
 				E1CC2ABC2CE0A218003314C1 /* Sources */,
 				E1CC2ABD2CE0A218003314C1 /* Frameworks */,
 				E1CC2ABE2CE0A218003314C1 /* Resources */,
-				E13A86B72CE1174A00CA6321 /* Embed Frameworks */,
+				E11FB3C02CE4FCE5006BD90B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E13A86B62CE1174900CA6321 /* PBXTargetDependency */,
+				E11FB3BF2CE4FCE5006BD90B /* PBXTargetDependency */,
 			);
 			name = CaloryIntake;
 			productName = CaloryIntake;
@@ -565,6 +587,8 @@
 			files = (
 				E1CC2AC62CE0A218003314C1 /* ContentView.swift in Sources */,
 				E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */,
+				E11FB3C22CE50AFC006BD90B /* DailyIntakeViewModel.swift in Sources */,
+				E11FB3BB2CE4FBB5006BD90B /* DailyIntakeView.swift in Sources */,
 				E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */,
 				E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */,
 			);
@@ -619,10 +643,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E13A86B62CE1174900CA6321 /* PBXTargetDependency */ = {
+		E11FB3BF2CE4FCE5006BD90B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E1CC2B482CE0B150003314C1 /* CaloryIntakeCore */;
-			targetProxy = E13A86B52CE1174900CA6321 /* PBXContainerItemProxy */;
+			targetProxy = E11FB3BE2CE4FCE5006BD90B /* PBXContainerItemProxy */;
 		};
 		E1CC2AD22CE0A21C003314C1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -759,13 +783,12 @@
 		E1CC2AE52CE0A21C003314C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloryIntake/Preview Content\"";
-				DEVELOPMENT_TEAM = 87P3C2FUMS;
+				DEVELOPMENT_TEAM = PF4HYCCJ8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -773,6 +796,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -789,13 +813,12 @@
 		E1CC2AE62CE0A21C003314C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CaloryIntake/Preview Content\"";
-				DEVELOPMENT_TEAM = 87P3C2FUMS;
+				DEVELOPMENT_TEAM = PF4HYCCJ8D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -803,6 +826,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

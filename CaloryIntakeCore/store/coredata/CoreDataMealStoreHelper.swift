@@ -16,7 +16,7 @@ public class CoreDataMealStoreHelper: MealStoreHelper {
         self.context = context
     }
     
-    func persist(mealEntry: MealEntry) async -> Bool {
+    public func persist(mealEntry: MealEntry) async -> Bool {
         _ = ManagedMealEntry.from(mealEntry: mealEntry, in: context)
         
         do {
@@ -28,7 +28,7 @@ public class CoreDataMealStoreHelper: MealStoreHelper {
         }
     }
     
-    func retrieveMeals() async -> [MealEntry] {
+    public func retrieveMeals() async -> [MealEntry] {
         let request: NSFetchRequest<ManagedMealEntry> = ManagedMealEntry.fetchRequest()
         
         do {
@@ -40,7 +40,7 @@ public class CoreDataMealStoreHelper: MealStoreHelper {
         }
     }
     
-    func deleteMeals() async -> Bool {
+    public func deleteMeals() async -> Bool {
         let request: NSFetchRequest<NSFetchRequestResult> = ManagedMealEntry.fetchRequest()
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         
