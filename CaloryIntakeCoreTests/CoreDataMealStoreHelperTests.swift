@@ -9,22 +9,68 @@ import XCTest
 import CoreData
 @testable import CaloryIntakeCore
 
-class CoreDataMealStoreHelperTests: XCTestCase {
+protocol MealStoreHelperSpecs {
+    func testPersistAndRetrieveMealEntry() async
+    func testDeleteMeals() async
     
-    var sut: CoreDataMealStoreHelper!
-    var context: NSManagedObjectContext!
+    func makeSUT() -> MealStoreHelper
+}
+
+extension MealStoreHelperSpecs {
+    func testPersistAndRetrieveMealEntry() async {
+        let sut = makeSUT()
+        let brakFastFoodItems = [
+            makeFoodItem(name: "Apple"),
+            makeFoodItem(name: "Banana")
+        ]
+        let breakfastEntry = MealEntry(id: UUID(), mealName: "Breakfast", foodItems: brakFastFoodItems)
+        
+        let launchFoodItems = [
+            makeFoodItem(name: "Bread"),
+            makeFoodItem(name: "Soup")
+        ]
+        let launchEntry = MealEntry(id: UUID(), mealName: "Launch", foodItems: launchFoodItems)
+        
+        let success = await sut.persist(mealEntry: breakfastEntry)
+        XCTAssertTrue(success, "Meal entry should be saved successfully")
+        let retrievedMeals = await sut.retrieveMeals()
+        XCTAssertEqual(retrievedMeals, [breakfastEntry])
+        
+        let _ = await sut.persist(mealEntry: launchEntry)
+        let newRetrievedMeals = await sut.retrieveMeals()
+        XCTAssertEqual(newRetrievedMeals, [breakfastEntry, launchEntry])
+    }
+    
+    private func makeFoodItem(name: String) -> FoodItem {
+        FoodItem(
+            id: UUID(),
+            name: name,
+            caloryCount: Double.random(in: 0.0...100.0),
+            proteinCount: Double.random(in: 0.1...5.0),
+            fatCount: Double.random(in: 0.1...3.0)
+        )
+    }
+}
+
+
+class CoreDataMealStoreHelperTests: XCTestCase, MealStoreHelperSpecs {
+    
+   var context: NSManagedObjectContext!
     
     override func setUp() {
         super.setUp()
         
-        sut = makeSUT()
     }
-    private func makeSUT(file: StaticString = #file, line: UInt = #line) -> CoreDataMealStoreHelper {
+     func makeSUT() -> CaloryIntakeCore.MealStoreHelper {
         let storeBundle = Bundle(for: CoreDataMealStoreHelper.self)
         let storeURL = URL(fileURLWithPath: "/dev/null") // In-memory store
-        let container = try! NSPersistentContainer.load(modelName: "Database", url: storeURL, in: storeBundle)
+        let container = try! NSPersistentContainer.load(modelName: "CaloryIntake", url: storeURL, in: storeBundle)
         context = container.newBackgroundContext()
         return CoreDataMealStoreHelper(context: context)
+    }
+    
+    func testPersistAndRetrieveMealEntryHere() async {
+        await testPersistAndRetrieveMealEntry()
     }
     
     func testPersistMealEntry() async {
