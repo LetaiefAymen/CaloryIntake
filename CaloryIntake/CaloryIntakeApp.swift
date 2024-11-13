@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import CaloryIntakeCore
 
 @main
 struct CaloryIntakeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(viewModel: CaloryIntakeViewModel())
+            DailyIntakeView(viewModel: .init(helper: InMemoryMealStoreHelper()))
         }
     }
 }
