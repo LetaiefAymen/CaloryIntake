@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct FoodItem {
+public struct FoodItem: Equatable {
     public let id: UUID
     public let name: String
     public let caloryCount: Double

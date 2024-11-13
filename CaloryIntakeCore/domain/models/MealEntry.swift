@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-public struct MealEntry {
+public struct MealEntry: Equatable {
     public var id: UUID
     public var mealName: String
     public var foodItems: [FoodItem]
