@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "E6914916-8484-4F81-9DFE-891C92701CB8",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CaloryIntake.xcodeproj",
+        "identifier" : "E1CC2B4F2CE0B150003314C1",
+        "name" : "CaloryIntakeCoreTests"
+      }
+    }
+  ],
+  "version" : 1
+}
