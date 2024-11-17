@@ -9,6 +9,7 @@ import CaloryIntakeCore
 
 struct DailyIntakeView: View {
     
+    @State var isPresented: Bool = false
     let viewModel: DailyIntakeViewModel
     
     var body: some View {
@@ -37,13 +38,16 @@ struct DailyIntakeView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        
+                        isPresented.toggle()
                     }) {
                         Image(systemName: "plus.circle")
                             .font(.title)
                     }
                 }
             }
+            .sheet(isPresented: $isPresented, content: {
+                MealSelectionView()
+            })
         }
     }
 }
