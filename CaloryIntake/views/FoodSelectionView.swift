@@ -10,45 +10,82 @@ import SwiftUI
 import CaloryIntakeCore
 
 struct FoodSelectionView: View {
-    var meal: String
     @Environment(\.presentationMode) var presentationMode
-    @ObservedObject var viewModel = CaloryIntakeViewModel()
+    @ObservedObject var viewModel: FoodSelectionViewModel
     
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.foodItems, id: \.name) { foodItem in
-                    FoodItemRow(foodItem: foodItem)
+                List(viewModel.foodItems, id: \.id) { foodItem in
+                    FoodItemRow(viewModel: viewModel, foodItem: foodItem)
                 }
+                .listStyle(.plain)
                 Button("Save") {
-                    // TODO Aymen: Add logic here
+                    viewModel.saveMeal()
                     presentationMode.wrappedValue.dismiss()
                 }
                 .padding()
             }
-            .navigationTitle("Add Food to \(meal)")
+            .navigationTitle("Add Food to \(viewModel.mealName)")
             .onAppear {
                 viewModel.loadItems()
             }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }){
+                        Text("\(viewModel.selectedFoodItems.count)")
+                            .bold()
+                            .padding(10)
+                            .overlay(Circle()
+                                .stroke(lineWidth: 2))
+                    }
+                }
+            }
         }
+        
     }
 }
 
 struct FoodItemRow: View {
+    @ObservedObject var viewModel: FoodSelectionViewModel
     var foodItem: FoodItem
-    
+
+    @State private var isCheckmarkVisible = false
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        HStack(spacing: 12) {
             Text(foodItem.name)
                 .font(.headline)
-            HStack {
-                Text("Calories: \(foodItem.caloryCount, specifier: "%.1f") kcal")
-                Text("Protein: \(foodItem.proteinCount, specifier: "%.1f") g")
-                Text("Fat: \(foodItem.fatCount, specifier: "%.1f") g")
-                
+                .foregroundColor(.primary)
+            Spacer()
+            Text("\(Int(foodItem.caloryCount)) kcal")
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+            Button(action: {
+                viewModel.select(foodItem)
+                withAnimation(.easeIn(duration: 0.3)) {
+                    isCheckmarkVisible = true
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    withAnimation(.easeInOut(duration: 0.3)) {
+                        isCheckmarkVisible = false
+                    }
+                }
+            }) {
+                if isCheckmarkVisible {
+                    Image(systemName: "checkmark.circle.fill")
+                        .foregroundColor(.green)
+                        .font(.system(size: 20))
+                        .transition(.scale)
+                } else {
+                    Image(systemName: "plus.circle")
+                        .foregroundColor(.blue)
+                        .font(.system(size: 20))
+                }
             }
-            .font(.subheadline)
-            .foregroundColor(.secondary)
+            .buttonStyle(PlainButtonStyle())
         }
         .padding(.vertical, 8)
     }
@@ -56,7 +93,7 @@ struct FoodItemRow: View {
 
 struct FoodSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        FoodSelectionView(meal: "Launch")
+        FoodSelectionView(viewModel: .init(mealName: "Launch"))
     }
 }
 

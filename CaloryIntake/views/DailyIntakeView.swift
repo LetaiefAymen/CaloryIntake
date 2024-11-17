@@ -10,7 +10,7 @@ import CaloryIntakeCore
 struct DailyIntakeView: View {
     
     @State var isPresented: Bool = false
-    let viewModel: DailyIntakeViewModel
+    @ObservedObject var viewModel: DailyIntakeViewModel
     
     var body: some View {
         NavigationView {
@@ -45,9 +45,14 @@ struct DailyIntakeView: View {
                     }
                 }
             }
-            .sheet(isPresented: $isPresented, content: {
+            .sheet(isPresented: $isPresented, onDismiss: {
+                viewModel.loadData()
+            }, content: {
                 MealSelectionView()
             })
+            .onAppear {
+                viewModel.loadData()
+            }
         }
     }
 }
@@ -58,6 +63,5 @@ struct DailyIntakeView: View {
         totalCalories: 2000,
         totalFats: 36,
         totalProteins: 100
-    )
-    )
+    ))
 }

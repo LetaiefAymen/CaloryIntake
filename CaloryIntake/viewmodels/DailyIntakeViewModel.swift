@@ -23,12 +23,13 @@ class DailyIntakeViewModel: ObservableObject {
         self.totalProteins = totalProteins
     }
     
-    func loadData() async throws {
-        let meals = await helper.retrieveMeals()
-        totalFats = calculateTotal(meals: meals, for: \.fatCount)
-        totalProteins = calculateTotal(meals: meals, for: \.proteinCount)
-        totalCalories = Int(calculateTotal(meals: meals, for: \.caloryCount))
-        
+    func loadData() {
+        Task { @MainActor in
+            let meals = await helper.retrieveMeals()
+            totalFats = calculateTotal(meals: meals, for: \.fatCount)
+            totalProteins = calculateTotal(meals: meals, for: \.proteinCount)
+            totalCalories = Int(calculateTotal(meals: meals, for: \.caloryCount))
+        }
     }
     
     private func calculateTotal<T: Numeric>(meals: [MealEntry], for keyPath: KeyPath<FoodItem, T>) -> T {

@@ -7,6 +7,7 @@
 
 
 import SwiftUI
+import CaloryIntakeCore
 
 enum Meal: Identifiable {
     case breakfast
@@ -30,6 +31,7 @@ struct MealSelectionView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var selectedMeal: Meal?
     @State private var isPresentingFoodSelection = false
+    @EnvironmentObject private var storeHelper: InMemoryMealStoreHelper
     
     var body: some View {
         VStack(spacing: 20) {
@@ -52,7 +54,7 @@ struct MealSelectionView: View {
         }
         .padding()
         .sheet(item: $selectedMeal) { meal in
-            FoodSelectionView(meal: meal.description)
+            FoodSelectionView(viewModel: .init(mealName: meal.description, mealStoreHelper: storeHelper))
         }
     }
 }

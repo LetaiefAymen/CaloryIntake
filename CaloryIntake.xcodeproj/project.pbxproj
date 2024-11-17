@@ -17,7 +17,7 @@
 		E11FB3C42CE54E08006BD90B /* MealSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3C32CE54E08006BD90B /* MealSelectionView.swift */; };
 		E11FB3C62CE54E95006BD90B /* FoodSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11FB3C52CE54E95006BD90B /* FoodSelectionView.swift */; };
 		E13A86A62CE111FF00CA6321 /* URLSessionHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */; };
-		E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */; };
+		E13A86A82CE1151600CA6321 /* FoodSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86A72CE1151600CA6321 /* FoodSelectionViewModel.swift */; };
 		E13A86B92CE1330F00CA6321 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86B82CE1330F00CA6321 /* Environment.swift */; };
 		E13A87152CE2196700CA6321 /* CoreDataMealStoreHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */; };
 		E13A87162CE2198500CA6321 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E13A86E72CE1650900CA6321 /* CoreData.framework */; };
@@ -95,7 +95,7 @@
 		E11FB3C32CE54E08006BD90B /* MealSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealSelectionView.swift; sourceTree = "<group>"; };
 		E11FB3C52CE54E95006BD90B /* FoodSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectionView.swift; sourceTree = "<group>"; };
 		E13A86A52CE111FF00CA6321 /* URLSessionHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClient.swift; sourceTree = "<group>"; };
-		E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloryIntakeViewModel.swift; sourceTree = "<group>"; };
+		E13A86A72CE1151600CA6321 /* FoodSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodSelectionViewModel.swift; sourceTree = "<group>"; };
 		E13A86B82CE1330F00CA6321 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
 		E13A86DA2CE164F100CA6321 /* CoreDataMealStoreHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataMealStoreHelperTests.swift; sourceTree = "<group>"; };
 		E13A86E72CE1650900CA6321 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -228,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				E11FB3C12CE50AFC006BD90B /* DailyIntakeViewModel.swift */,
-				E13A86A72CE1151600CA6321 /* CaloryIntakeViewModel.swift */,
+				E13A86A72CE1151600CA6321 /* FoodSelectionViewModel.swift */,
 			);
 			path = viewmodels;
 			sourceTree = "<group>";
@@ -594,7 +594,7 @@
 				E11FB3BB2CE4FBB5006BD90B /* DailyIntakeView.swift in Sources */,
 				E1CC2AC42CE0A218003314C1 /* CaloryIntakeApp.swift in Sources */,
 				E11FB3C62CE54E95006BD90B /* FoodSelectionView.swift in Sources */,
-				E13A86A82CE1151600CA6321 /* CaloryIntakeViewModel.swift in Sources */,
+				E13A86A82CE1151600CA6321 /* FoodSelectionViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,9 +10,16 @@ import CaloryIntakeCore
 
 @main
 struct CaloryIntakeApp: App {
+    @State var storeHelper: InMemoryMealStoreHelper = .init()
+    
     var body: some Scene {
         WindowGroup {
-            DailyIntakeView(viewModel: .init(helper: InMemoryMealStoreHelper()))
+            DailyIntakeView(viewModel: .init(helper: storeHelper))
+                .environmentObject(storeHelper)
         }
     }
+}
+
+extension InMemoryMealStoreHelper: @retroactive ObservableObject {
+    
 }
