@@ -9,14 +9,13 @@
 import SwiftUI
 import CaloryIntakeCore
 
-enum Meal: Identifiable {
+private enum Meal: Identifiable {
     case breakfast
     case launch
     case dinner
     case snack
     
     var id: String { self.description }
-
     var description: String {
         switch self {
         case .breakfast: return "Breakfast"
@@ -28,7 +27,6 @@ enum Meal: Identifiable {
 }
 
 struct MealSelectionView: View {
-    @Environment(\.presentationMode) var presentationMode
     @State private var selectedMeal: Meal?
     @State private var isPresentingFoodSelection = false
     @EnvironmentObject private var storeHelper: InMemoryMealStoreHelper
@@ -58,7 +56,6 @@ struct MealSelectionView: View {
         }
     }
 }
-
 
 struct MealSelectionView_Previews: PreviewProvider {
     static var previews: some View {
