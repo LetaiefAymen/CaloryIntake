@@ -14,35 +14,30 @@ struct DailyIntakeView: View {
     
     var body: some View {
         NavigationView {
-            VStack(spacing: 10) {
-                Text("Today's Intake")
-                    .font(.largeTitle)
-                    .bold()
-                Text("Calories")
-                    .bold()
-                Text("\(viewModel.totalCalories) kcal")
-                    .font(.title)
-                Text("Proteins")
-                    .bold()
-                Text("\(viewModel.totalProteins,specifier: "%.1f") g")
-                    .font(.title)
-                Text("Fats")
-                    .bold()
-                Text("\(viewModel.totalFats,specifier: "%.1f") g")
-                    .font(.title)
+            ScrollView {
+                VStack(spacing: 20) {
+                    cardView(
+                        title: "Calories",
+                        value: "\(viewModel.totalCalories) kcal",
+                        color: .blue
+                    )
+                    cardView(
+                        title: "Proteins",
+                        value: "\(viewModel.totalProteins) g",
+                        color: .green
+                    )
+                    cardView(
+                        title: "Fats",
+                        value: "\(viewModel.totalFats) g",
+                        color: .yellow
+                    )
+                }
+                .padding(.top, 30)
             }
-            .padding(40)
-            .background(Color.blue)
-            .cornerRadius(30)
-            .navigationTitle("Calorie counter")
+            .navigationTitle("Today's Intake")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {
-                        isPresented.toggle()
-                    }) {
-                        Image(systemName: "plus.circle")
-                            .font(.title)
-                    }
+                    toolbarButton
                 }
             }
             .sheet(isPresented: $isPresented, onDismiss: {
@@ -53,6 +48,28 @@ struct DailyIntakeView: View {
             .onAppear {
                 viewModel.loadData()
             }
+        }
+    }
+    
+    @ViewBuilder private func cardView(title: String, value: String, color: Color) -> some View {
+        VStack(spacing: 10) {
+            Text(title)
+                .font(.title2)
+            Text(value)
+                .font(.title)
+                .bold()
+        }
+        .padding(40)
+        .background(color)
+        .cornerRadius(30)
+    }
+    
+    var toolbarButton: some View {
+        Button(action: {
+            isPresented.toggle()
+        }) {
+            Text("Add Meal")
+                .font(.title3)
         }
     }
 }

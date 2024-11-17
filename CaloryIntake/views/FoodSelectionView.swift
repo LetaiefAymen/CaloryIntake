@@ -37,11 +37,10 @@ struct FoodSelectionView: View {
     }
     
     var saveButton: some View {
-        Button("Save") {
+        CapsuleButton(title:"Save") {
             viewModel.saveMeal()
             dismiss()
         }
-        .padding()
     }
     
     var selectedFoodToolbarItem: some ToolbarContent {
@@ -55,6 +54,30 @@ struct FoodSelectionView: View {
                     .overlay(Circle()
                         .stroke(lineWidth: 2))
             }
+        }
+    }
+}
+
+struct CapsuleButton: View {
+    var title: String
+    var action: () -> Void = {}
+    var backgroundColor: Color = .blue
+    var foregroundColor: Color = .white
+    var padding: CGFloat = 32
+    var fontSize: CGFloat = 18
+    
+    var body: some View {
+        Button(action: action) {
+            Text(title)
+                .font(.system(size: fontSize, weight: .bold))
+                .foregroundColor(foregroundColor)
+                .padding(.horizontal, padding)
+                .padding(.vertical, padding / 2)
+                .frame(maxWidth: .infinity)
+                .background(backgroundColor)
+                .clipShape(Capsule())
+                .shadow(color: .black.opacity(0.2), radius: 4, x: 2, y: 2)
+                .padding(.horizontal, 20)
         }
     }
 }
@@ -100,7 +123,7 @@ struct FoodItemRow: View {
         withAnimation(.easeIn(duration: 0.3)) {
             isCheckmarkVisible = true
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             withAnimation(.easeInOut(duration: 0.3)) {
                 isCheckmarkVisible = false
             }
