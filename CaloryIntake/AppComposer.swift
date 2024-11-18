@@ -7,13 +7,16 @@
 
 import Foundation
 import CaloryIntakeCore
+import CoreData
 
 final class AppComposer: ObservableObject {
     
     private let storeHelper: MealStoreHelper
     
     init() {
-        storeHelper = InMemoryMealStoreHelper()
+        storeHelper = AppComposer.makeCoreDataStoreHelper()
+        // In order to use InMemoryStoreHelper, use this instead
+        // storeHelper = InMemoryMealStoreHelper()
     }
     
     func composeFoodItemLoader() -> FoodItemsLoader {
@@ -27,6 +30,13 @@ final class AppComposer: ObservableObject {
     
     func composeStoreHelper() -> MealStoreHelper {
         storeHelper
+    }
+    
+    private static func makeCoreDataStoreHelper() -> MealStoreHelper {
+        let storeBundle = Bundle(for: CoreDataMealStoreHelper.self)
+        let container = try! NSPersistentContainer.load(modelName: "CaloryIntake", url: nil, in: storeBundle)
+        let context = container.newBackgroundContext()
+        return CoreDataMealStoreHelper(context: context)
     }
     
 }

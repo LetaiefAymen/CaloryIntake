@@ -42,7 +42,7 @@ Outcome: The user sees the meal added to their list of logged meals, and the dai
 ## Tech Stack
 
 - **Language:** Swift
-- **Frameworks:** SwiftUI
+- **Frameworks:** SwiftUI, XCTest
 - **Networking:** URLSession
 - **Storage:** CoreData, InMemory
 - **Design Patterns:** MVVM (Model-View-ViewModel), Observer, Singleton, Composite
