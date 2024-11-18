@@ -69,7 +69,9 @@ The application integrates with an external API to fetch nutritional information
 
 ## Testing
 
-- **Unit Testing:** Developed unit tests for core functionalities to ensure data integrity and correct calculations.
+- **Unit Testing:** Developed unit tests for core functionalities to ensure data integrity and correct logic. The code coverage for the CaloryIntakeCore module right now is around **75%**
+<img width="646" alt="Screenshot 2024-11-18 at 10 08 59" src="https://github.com/user-attachments/assets/02d0f496-f578-406e-a696-e76b22c52df3">
+
 - **UI Testing:** Still didn't find time to include UI Testing at the moment.
 
 ## Future Enhancements
