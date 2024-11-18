@@ -12,11 +12,10 @@ final class FoodSelectionViewModel: ObservableObject {
     
     let loader: RemoteFoodItemsLoader
     let mealStoreHelper: MealStoreHelper
-    @Published
-    var foodItems: [FoodItem] = []
-    @Published
-    var selectedFoodItems: [FoodItem] = []
-    var mealName: String
+    let mealName: String
+    
+    @Published var foodItems: [FoodItem] = []
+    @Published var selectedFoodItems: [FoodItem] = []
     
     init(
         mealName: String,
@@ -60,6 +59,5 @@ final class FoodSelectionViewModel: ObservableObject {
                 )
             )
         }
-        
     }
 }

@@ -20,13 +20,28 @@
                ReferencedContainer = "container:CaloryIntake.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "NO"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E1CC2AD92CE0A21C003314C1"
+               BuildableName = "CaloryIntakeUITests.xctest"
+               BlueprintName = "CaloryIntakeUITests"
+               ReferencedContainer = "container:CaloryIntake.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO"
@@ -40,13 +55,12 @@
             </BuildableReference>
          </TestableReference>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E1CC2AD92CE0A21C003314C1"
-               BuildableName = "CaloryIntakeUITests.xctest"
-               BlueprintName = "CaloryIntakeUITests"
+               BlueprintIdentifier = "E1CC2B4F2CE0B150003314C1"
+               BuildableName = "CaloryIntakeCoreTests.xctest"
+               BlueprintName = "CaloryIntakeCoreTests"
                ReferencedContainer = "container:CaloryIntake.xcodeproj">
             </BuildableReference>
          </TestableReference>
