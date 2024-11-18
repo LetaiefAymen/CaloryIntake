@@ -21,6 +21,8 @@ CaloryIntake is an case study iOS application designed to help users monitor and
 CaloryIntake empowers users to log their meals and snacks, providing insights into their calorie consumption patterns.
 The app aims to assist users in achieving their dietary goals by offering a user-friendly interface for tracking caloric intake.
 
+![Recording_iPhone_16_Pro_6 3_2024-11-18_10 54 05](https://github.com/user-attachments/assets/b0316e54-0a24-4a16-83b4-760c3133143d)
+
 ### Use cases
 #### Use Case 1: Monitor Daily Nutritional Intake
 Description:
