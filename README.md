@@ -45,7 +45,7 @@ Outcome: The user sees the meal added to their list of logged meals, and the dai
 - **Frameworks:** SwiftUI
 - **Networking:** URLSession
 - **Storage:** CoreData, InMemory
-- **Design Patterns:** MVVM (Model-View-ViewModel), Observer, Singleton
+- **Design Patterns:** MVVM (Model-View-ViewModel), Observer, Singleton, Composite
 
 ## Architecture
 

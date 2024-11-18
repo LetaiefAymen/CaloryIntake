@@ -10,7 +10,7 @@ import CaloryIntakeCore
 
 final class FoodSelectionViewModel: ObservableObject {
     
-    let loader: RemoteFoodItemsLoader
+    let loader: FoodItemsLoader
     let mealStoreHelper: MealStoreHelper
     let mealName: String
     
@@ -20,7 +20,7 @@ final class FoodSelectionViewModel: ObservableObject {
     init(
         mealName: String,
         mealStoreHelper: MealStoreHelper = InMemoryMealStoreHelper(),
-        loader: RemoteFoodItemsLoader = RemoteFoodItemsLoader(
+        loader: FoodItemsLoader = RemoteFoodItemsLoader(
             url: AppEnvironment.shared.foodItemsUrl,
             client: URLSessionHTTPClient(
                 session: URLSession(configuration: .default)

@@ -10,12 +10,12 @@ import CaloryIntakeCore
 
 @main
 struct CaloryIntakeApp: App {
-    @State var storeHelper: InMemoryMealStoreHelper = .init()
+    @State var appComposer: AppComposer = .init()
     
     var body: some Scene {
         WindowGroup {
-            DailyIntakeView(viewModel: .init(helper: storeHelper))
-                .environmentObject(storeHelper)
+            DailyIntakeView(viewModel: .init(helper: appComposer.composeStoreHelper()))
+                .environmentObject(appComposer)
         }
     }
 }

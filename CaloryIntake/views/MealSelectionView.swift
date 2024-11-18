@@ -12,7 +12,7 @@ import CaloryIntakeCore
 struct MealSelectionView: View {
     @State private var selectedMeal: Meal?
     @State private var isPresentingFoodSelection = false
-    @EnvironmentObject private var storeHelper: InMemoryMealStoreHelper
+    @EnvironmentObject private var appComposer: AppComposer
     
     var body: some View {
         VStack(spacing: 20) {
@@ -34,7 +34,13 @@ struct MealSelectionView: View {
         }
         .padding()
         .sheet(item: $selectedMeal) { meal in
-            FoodSelectionView(viewModel: .init(mealName: meal.description, mealStoreHelper: storeHelper))
+            FoodSelectionView(
+                viewModel: .init(
+                    mealName: meal.description,
+                    mealStoreHelper: appComposer.composeStoreHelper(),
+                    loader: appComposer.composeFoodItemLoader()
+                )
+            )
         }
     }
 }
